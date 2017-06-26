@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defaultMarginBottom">12dp</dimen>
+    <dimen name="mainActivityMarginStart">8dp</dimen>
+    <dimen name="mainActivityMarginEnd">8dp</dimen>
+</resources>

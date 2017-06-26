@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutInputUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/editTextInputUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonLoadData"
+        android:layout_below="@id/textInputLayoutInputUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Получить данные">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonShowLongUrl"
+        android:layout_below="@id/textInputLayoutInputUrl"
+        android:layout_toEndOf="@id/buttonLoadData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Полная ссылка">
+    </Button>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonShowLongUrl"
+        android:layout_marginStart="@dimen/mainActivityMarginStart"
+        android:layout_marginEnd="@dimen/mainActivityMarginEnd">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutScrollable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutItemDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/textViewItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+                <TextView
+                    android:id="@+id/textViewPrice"
+                    android:layout_below="@+id/textViewItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Цена: "
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"/>
+
+                <TextView
+                    android:id="@+id/textViewItemPrice"
+                    android:layout_below="@+id/textViewItemTitle"
+                    android:layout_toEndOf="@id/textViewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"/>
+
+                <ImageView
+                    android:id="@+id/imageViewItemImage"
+                    android:layout_below="@+id/textViewItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarStoreDetails"
+                style="?android:attr/progressBarStyle"
+                android:layout_below="@id/relativeLayoutItemDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone">
+            </ProgressBar>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutStoreDetails"
+                android:layout_below="@id/relativeLayoutItemDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/textViewSellerSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:gravity="center"
+                    android:text="Seller Summary"/>
+
+                <TextView
+                    android:id="@+id/textViewSellerTitle"
+                    android:layout_below="@+id/textViewSellerSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackScore"
+                    android:layout_below="@+id/textViewSellerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Feedback Score: "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerFeedbackScore"
+                    android:layout_toEndOf="@id/textViewFeedbackScore"
+                    android:layout_below="@+id/textViewSellerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSince"
+                    android:layout_below="@+id/textViewFeedbackScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="AliExpress Seller Since: "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerSince"
+                    android:layout_toEndOf="@id/textViewSince"
+                    android:layout_below="@+id/textViewFeedbackScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewDsr"
+                    android:layout_below="@+id/textViewSince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:gravity="center"
+                    android:text="Detailed seller ratings"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewItemAsDescribed"
+                    android:layout_below="@+id/textViewDsr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Item as Described: "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerItemAsDescribed"
+                    android:layout_toEndOf="@id/textViewItemAsDescribed"
+                    android:layout_below="@+id/textViewDsr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewCommunication"
+                    android:layout_below="@+id/textViewItemAsDescribed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Communication: "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerCommunication"
+                    android:layout_toEndOf="@id/textViewCommunication"
+                    android:layout_below="@+id/textViewItemAsDescribed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewShippingSpeed"
+                    android:layout_below="@+id/textViewCommunication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Shipping Speed: "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerShippingSpeed"
+                    android:layout_toEndOf="@id/textViewShippingSpeed"
+                    android:layout_below="@+id/textViewCommunication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackHistory"
+                    android:layout_below="@+id/textViewShippingSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:gravity="center"
+                    android:text="Feedback History (3 Months)"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewPositive"
+                    android:layout_below="@+id/textViewFeedbackHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Positive (4-5 Stars): "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerPositive3m"
+                    android:layout_toEndOf="@id/textViewPositive"
+                    android:layout_below="@+id/textViewFeedbackHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewNeutral"
+                    android:layout_below="@+id/textViewPositive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Neutral (3 Stars): "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerNeutral3m"
+                    android:layout_toEndOf="@id/textViewNeutral"
+                    android:layout_below="@+id/textViewPositive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewNegative"
+                    android:layout_below="@+id/textViewNeutral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Negative (1-2 Stars): "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerNegative3m"
+                    android:layout_toEndOf="@id/textViewNegative"
+                    android:layout_below="@+id/textViewNeutral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewPositiveFeedbackRate"
+                    android:layout_below="@+id/textViewNegative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    android:text="Positive feedback rate: "
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSellerPositiveFeedbackRate"
+                    android:layout_toEndOf="@id/textViewPositiveFeedbackRate"
+                    android:layout_below="@+id/textViewNegative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defaultMarginBottom"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
