@@ -9,7 +9,7 @@
       "maxzoom": 18,
       "attribution": "Microsoft Bing Maps",
       "tiles": [
-        "__BING_TILE_URL__"
+        "https://t.ssl.ak.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=15568&n=z&prx=1"
       ]
     }
   },
