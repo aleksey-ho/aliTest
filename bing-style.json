@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "bing-satellite",
+  "sources": {
+    "bing-satellite": {
+      "type": "raster",
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 18,
+      "attribution": "Microsoft Bing Maps",
+      "tiles": [
+        "__BING_TILE_URL__"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "bing-satellite-layer",
+      "type": "raster",
+      "source": "bing-satellite"
+    }
+  ]
+}

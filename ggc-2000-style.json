@@ -1,0 +1,24 @@
+{
+  "version": 8,
+  "name": "ggc-2km",
+  "sources": {
+    "ggc-2km": {
+      "type": "raster",
+      "scheme": "xyz",
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 22,
+      "attribution": "MapMagic",
+      "tiles": [
+        "https://r-tiles.mapmagic.app/ggc-2km/{z}/{x}/{y}.png"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "ggc-2km-layer",
+      "type": "raster",
+      "source": "ggc-2km"
+    }
+  ]
+}

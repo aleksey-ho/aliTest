@@ -1,0 +1,27 @@
+{
+  "version": 8,
+  "name": "google-satellite",
+  "sources": {
+    "google-satellite": {
+      "type": "raster",
+      "scheme": "xyz",
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 22,
+      "attribution": "Google",
+      "tiles": [
+        "https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        "https://mt2.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        "https://mt3.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "google-satellite-layer",
+      "type": "raster",
+      "source": "google-satellite"
+    }
+  ]
+}
